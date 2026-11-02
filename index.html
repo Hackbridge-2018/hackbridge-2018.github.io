@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hackbridge Society | Cambridge University tech, hackathons &amp; industry</title>
+<meta name="description" content="Hackbridge is a Cambridge University student society bridging students with industry: speaker events, hackathons and projects with start-ups and research groups.">
+<meta name="keywords" content="Hackbridge, Hackbridge Society, Cambridge, University of Cambridge, hackathon, student society, tech, AI, start-ups">
+<meta name="theme-color" content="#1b2a4a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hackbridge">
+<meta property="og:title" content="Hackbridge Society, Cambridge">
+<meta property="og:description" content="Bridging Cambridge's tech builders and industry: speaker events, hackathons and projects with start-ups and research groups.">
+<meta property="og:image" content="https://hackbridge-2018.github.io/img/genai-panel.jpg">
+<meta property="og:url" content="https://hackbridge-2018.github.io/">
+<link rel="canonical" href="https://hackbridge-2018.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231b2a4a'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='700' font-size='34' fill='white' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Hackbridge Society","url":"https://hackbridge-2018.github.io/","alternateName":"Hackbridge","description":"A University of Cambridge student society bridging students with industry through speaker events, hackathons and projects with start-ups and research groups.","email":"hellohackbridge@gmail.com","parentOrganization":{"@type":"CollegeOrUniversity","name":"University of Cambridge"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap">
+<style>
+/* Light sage canvas, Midnight-blue type, soft-blue italics; serif display, quiet sans body; one Midnight section for rhythm. */
+:root{
+  --bg:#e4ece7;
+  --bg2:#dae4de;
+  --paper:#f4f7f5;
+  --ink:#1b2a4a;
+  --fg:#1b2a4a;
+  --muted:#4e5a72;
+  --dim:#9aa6b4;
+  --soft:#6d8cc4;
+  --soft-ink:#4d6ca6;
+  --line:rgba(27,42,74,.16);
+  --serif:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
+  --sans:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;font-weight:400}
+a{color:inherit}
+::selection{background:var(--ink);color:var(--bg)}
+:focus-visible{outline:1px solid var(--soft-ink);outline-offset:4px}
+.wrap{max-width:1296px;margin:0 auto;padding-left:max(28px, env(safe-area-inset-left, 0px));padding-right:max(28px, env(safe-area-inset-right, 0px))}
+@media (max-width:600px){.wrap{padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}}
+.eye{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink);display:flex;align-items:center;gap:16px;font-weight:500}
+.eye::before{content:"";width:44px;height:1px;background:currentColor;flex:none}
+.small{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500}
+
+/* nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:78px}
+.logo{display:inline-flex;align-items:center;background:var(--ink);color:#fff;font-family:var(--sans);font-weight:700;font-size:15px;letter-spacing:.14em;padding:10px 14px 9px 16px;text-decoration:none;line-height:1}
+.nav ul{display:flex;gap:40px;list-style:none;margin:0;padding:0}
+.nav ul a{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;font-weight:500;transition:color .2s}
+.nav ul a:hover{color:var(--soft-ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;font-weight:500;border:1px solid rgba(27,42,74,.35);color:var(--ink);transition:background .25s,color .25s,border-color .25s;white-space:nowrap}
+.btn:hover{border-color:var(--ink);background:rgba(27,42,74,.05)}
+.btn.solid{background:var(--ink);border-color:var(--ink);color:var(--bg);font-weight:600}
+.btn.solid:hover{background:#2a3d66;border-color:#2a3d66}
+.btn.line{border-color:var(--ink);color:var(--soft-ink);padding:12px 20px}
+@media (max-width:900px){.nav ul{display:none}}
+@media (max-width:420px){.nav .btn.line{display:none}}
+
+/* hero */
+.hero{position:relative;border-bottom:1px solid var(--line);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(55% 65% at 78% 42%,rgba(109,140,196,.13),transparent 70%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(36px,5vw,72px);padding-block:clamp(48px,6vw,80px) clamp(40px,5vw,64px);align-items:center}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(52px,7vw,100px);line-height:.98;letter-spacing:-.01em;margin:28px 0 0;text-wrap:balance;color:var(--ink)}
+h1 em{font-style:italic;color:var(--soft)}
+.lede{margin:28px 0 0;font-size:clamp(16px,1.35vw,18px);line-height:1.7;color:var(--muted);max-width:34em;font-weight:300}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.arch{position:relative;aspect-ratio:5/6;max-height:640px;width:100%;border-radius:999px 999px 4px 4px;overflow:hidden;box-shadow:0 30px 70px rgba(27,42,74,.22);background:var(--bg2)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:40% center;display:block}
+.arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,42,74,0) 58%,rgba(27,42,74,.6))}
+.arch .cap{position:absolute;left:28px;bottom:24px;z-index:2;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#e9eef6}
+.partners{position:relative;display:flex;flex-wrap:wrap;gap:12px 44px;align-items:baseline;border-top:1px solid var(--line);padding-block:24px 30px}
+.partners b{font-weight:500;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-right:8px}
+.partners span{font-family:var(--serif);font-size:clamp(20px,1.9vw,26px);color:var(--ink);white-space:nowrap}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.arch{aspect-ratio:4/3.4;max-height:none}}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line);background:var(--bg2)}
+.stat{padding:clamp(28px,3.4vw,44px) 28px;border-right:1px solid var(--line);min-width:0;text-align:center}
+.stat:last-child{border-right:0}
+.stat .n{font-family:var(--serif);font-size:clamp(44px,5vw,68px);font-weight:400;color:var(--ink);line-height:1;font-variant-numeric:lining-nums}
+.stat .l{margin-top:12px}
+@media (max-width:640px){.stats{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}}
+
+/* sections */
+section{padding-block:clamp(80px,10vw,136px);border-bottom:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px;align-items:end;margin-bottom:56px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(38px,4.8vw,66px);line-height:1.02;letter-spacing:-.005em;margin:18px 0 0;text-wrap:balance;color:var(--ink)}
+h2 em{font-style:italic;color:var(--soft)}
+.sec-head p{color:var(--muted);max-width:40em;margin:0;font-size:17px;line-height:1.7;font-weight:300}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr;gap:18px}}
+
+/* photos */
+#photos{background:var(--bg2)}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+figure{margin:0;position:relative;overflow:hidden;background:var(--bg);min-width:0;border-radius:3px}
+figure img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.82);transition:filter .6s ease,transform .9s ease}
+figure:hover img{filter:none;transform:scale(1.025)}
+figcaption{position:absolute;left:0;bottom:0;right:0;padding:36px 16px 14px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#eef2f8;background:linear-gradient(transparent,rgba(27,42,74,.82))}
+.g1{grid-column:span 7;aspect-ratio:4/3}
+.g2{grid-column:span 5;aspect-ratio:auto;border-radius:999px 999px 3px 3px}
+.g3,.g4,.g5{grid-column:span 4;aspect-ratio:3/2}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr}.g1{grid-column:span 2}.g2{grid-column:span 2;aspect-ratio:4/4.4}.g3,.g4{grid-column:span 1}.g5{grid-column:span 2}}
+
+/* project carousel, Apple TV style */
+.carousel{position:relative;overflow:hidden;touch-action:pan-y;user-select:none;-webkit-user-select:none;outline:none}
+.carousel:focus-visible{outline:1px solid var(--soft-ink);outline-offset:-1px}
+.carousel.grab{cursor:none}
+.track{position:relative;height:var(--h,520px)}
+.slide{position:absolute;top:0;left:0;width:var(--sw,1100px);height:var(--h,520px);overflow:hidden;border-radius:4px;will-change:transform,opacity;backface-visibility:hidden;box-shadow:0 20px 50px rgba(27,42,74,.10)}
+.slide.light{background:var(--paper);color:var(--ink)}
+.slide.dark{background:var(--ink);color:#f1f4f8}
+.sbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.sshade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,32,58,.92) 0%,rgba(20,32,58,.62) 34%,rgba(20,32,58,0) 64%),linear-gradient(0deg,rgba(20,32,58,.8) 0%,rgba(20,32,58,0) 38%)}
+.lshade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(244,247,245,.92) 0%,rgba(244,247,245,.6) 38%,rgba(244,247,245,0) 62%),linear-gradient(0deg,rgba(244,247,245,.85) 0%,rgba(244,247,245,0) 34%)}
+.svis{position:absolute;right:7%;top:47%;transform:translateY(-50%);max-width:44%;max-height:62%;object-fit:contain;pointer-events:none;mix-blend-mode:multiply}
+.stext{position:absolute;left:clamp(22px,4vw,60px);top:clamp(24px,4.2vw,58px);max-width:50%}
+.smeta{font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--soft-ink)}
+.slide.dark .smeta{color:#a9bde3}
+.stitle{margin:14px 0 0;font-family:var(--serif);font-size:clamp(46px,7vw,112px);font-weight:400;letter-spacing:-.01em;line-height:.92;text-wrap:balance}
+.sfoot{position:absolute;left:clamp(22px,4vw,60px);right:clamp(22px,4vw,60px);bottom:clamp(20px,3.4vw,44px);display:flex;align-items:center;gap:18px}
+.pill{flex:none;padding:10px 18px 9px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;white-space:nowrap;background:#e4ece7;color:var(--ink)}
+.slide.light .pill{background:var(--ink);color:#e4ece7}
+.sline{font-size:clamp(14px,1.3vw,17px);line-height:1.45;min-width:0;max-width:640px;opacity:.92;font-weight:400}
+.sline b{font-weight:600}
+.dots{display:flex;justify-content:center;gap:10px;margin-top:26px}
+.dot{width:7px;height:7px;border-radius:99px;border:0;padding:0;background:var(--dim);cursor:pointer;transition:width .4s cubic-bezier(.2,.7,.2,1),background .3s}
+.dot:hover{background:var(--muted)}
+.dot.on{width:30px;background:var(--ink)}
+.svis.wide{right:auto;left:50%;top:54%;transform:translate(-50%,-50%);max-width:58%}
+.carousel.m .svis{right:auto;left:50%;top:56%;transform:translate(-50%,-50%);max-width:78%;max-height:32%}
+.carousel.m .stext{max-width:88%}
+.carousel.m .sfoot{flex-direction:column;align-items:flex-start;gap:10px}
+.carousel.m .sshade{background:linear-gradient(180deg,rgba(20,32,58,.88) 0%,rgba(20,32,58,.2) 40%,rgba(20,32,58,.2) 55%,rgba(20,32,58,.92) 100%)}
+.dragcur{position:fixed;left:0;top:0;width:86px;height:86px;margin:-43px 0 0 -43px;border-radius:50%;border:1px solid rgba(255,255,255,.7);background:rgba(27,42,74,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:grid;place-items:center;pointer-events:none;z-index:30;opacity:0;transform:translate3d(-200px,-200px,0);transition:opacity .25s,scale .25s}
+.dragcur span{font-family:var(--serif);font-style:italic;font-size:18px;color:#fff}
+.dragcur.show{opacity:1}
+.dragcur.down{scale:.8}
+
+/* committee */
+.team{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.member{padding:34px 30px;border:1px solid var(--line);background:rgba(255,255,255,.35);min-width:0;display:flex;align-items:center;gap:22px}
+.mono-gram{flex:none;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:var(--ink);font-family:var(--serif);font-size:22px;color:#e4ece7;letter-spacing:.06em}
+.member h3{font-family:var(--serif);font-size:28px;font-weight:500;margin:0;line-height:1.1}
+.member .role{margin-top:6px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--soft-ink);font-weight:500}
+.see-all{display:flex;justify-content:center;margin-top:40px}
+@media (max-width:900px){.team{grid-template-columns:1fr}}
+
+/* speak: the one Midnight section */
+#join{background:var(--ink);color:#eef2f0;border-bottom:0}
+#join .eye{color:#c9d5ea}
+#join h2{color:#f3f6f4}
+#join h2 em{color:#9fb6e0}
+#join .lede{color:#b7c0d0}
+.join{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,96px);align-items:end}
+.join h2{font-size:clamp(42px,5.6vw,80px)}
+.sponsor-wrap{margin-top:80px;border-top:1px solid rgba(228,236,231,.18);padding-top:22px}
+.sponsors{display:flex;flex-wrap:wrap;gap:14px 56px;align-items:baseline;padding-block:26px 6px}
+.sponsors span{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:500;color:#f3f6f4;line-height:1.05}
+.people{margin-top:64px;border-top:1px solid rgba(228,236,231,.18)}
+.people-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:22px}
+.people-head .small{color:#8f9ab0}
+.people-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:28px;border-top:1px solid rgba(228,236,231,.12)}
+.person{padding:18px 0 20px;border-bottom:1px solid rgba(228,236,231,.12);min-width:0}
+.person h4{margin:0;font-family:var(--serif);font-size:21px;font-weight:600;line-height:1.2;color:#f3f6f4}
+.person .what{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#9fb6e0;margin-bottom:6px;font-weight:500}
+.person p{margin:4px 0 0;color:#a9b3c4;font-size:13.5px;font-weight:300}
+@media (max-width:900px){.join{grid-template-columns:1fr}.people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.people-grid{grid-template-columns:1fr}}
+.contact{background:var(--bg);color:var(--ink);padding:34px 34px 30px;border-radius:2px;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+#join .contact .eye{color:var(--ink)}
+.contact dl{margin:22px 0 0;display:grid;grid-template-columns:auto 1fr;gap:12px 24px;font-size:14.5px}
+.contact dt{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft-ink);padding-top:4px;font-weight:600}
+.contact dd{margin:0;overflow-wrap:anywhere}
+#email{font-family:var(--serif);font-size:22px;color:var(--ink);font-weight:500}
+.copy{margin-top:26px;font:inherit;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;background:var(--ink);color:var(--bg);border:0;padding:13px 20px;cursor:pointer;transition:background .2s}
+.copy:hover{background:#2a3d66}
+
+/* about overlay */
+.about{position:fixed;inset:0;z-index:50;background:var(--bg);overflow-y:auto;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);animation:fadein .35s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(8px)}}
+.about-bar{display:flex;justify-content:space-between;align-items:center;height:78px;border-bottom:1px solid var(--line)}
+.about-close{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;font-weight:500}
+.about-close:hover{color:var(--soft-ink)}
+.about-body{padding-block:clamp(56px,8vw,104px)}
+.about-body .sec-head{align-items:start}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.pillar{padding:34px 30px 36px;border:1px solid var(--line);background:rgba(255,255,255,.35);min-width:0}
+.pillar h3{font-family:var(--serif);font-size:32px;font-weight:500;margin:16px 0 12px;line-height:1.1}
+.pillar p{color:var(--muted);margin:0;font-weight:300}
+.pillar ul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:9px;font-size:14px}
+.pillar li::before{content:"— ";color:var(--soft)}
+.pillar.lead{background:var(--ink);border-color:var(--ink);color:#f3f6f4}
+.pillar.lead p{color:#b7c0d0}
+.pillar.lead .small{color:#9fb6e0}
+.pillar .small{color:var(--soft-ink)}
+@media (max-width:900px){.pillars{grid-template-columns:1fr}}
+body.locked{overflow:hidden}
+
+footer{padding-block:44px 56px;background:var(--ink);border-top:1px solid rgba(228,236,231,.14);color:#eef2f0}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center}
+footer nav{display:flex;flex-wrap:wrap;gap:28px}
+footer a:not(.logo){font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:#a9b3c4;text-decoration:none}
+footer a:not(.logo):hover{color:#fff}
+footer .logo{background:#fff;color:var(--ink)}
+footer .small{color:#8f9ab0}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Hackbridge home">HACKBRIDGE</a>
+    <ul>
+      <li><a href="#archive">Projects</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#join">Speak</a></li>
+      <li><a href="#about">About us</a></li>
+    </ul>
+    <a class="btn line" href="#join">Partner with us</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="eye">Cambridge · Students × Industry</div>
+          <h1>Bridging Cambridge's tech builders <em>and industry.</em></h1>
+          <p class="lede">Each term we bring founders, engineers and investors into the room with Cambridge's most ambitious students, from physical AI and chips to venture capital. Plus hackathons and real projects with start-ups and research groups.</p>
+          <div class="ctas">
+            <!-- TODO: replace href with the mailing list sign-up URL -->
+            <a class="btn solid" href="#mailing-list" target="_blank" rel="noopener">Join the mailing list</a>
+            <a class="btn" href="#join">Become a partner</a>
+          </div>
+        </div>
+        <div class="arch"><img src="img/genai-panel.jpg" alt="Industry panel at the Hackbridge Gen AI hackathon"><span class="cap">Industry panel · Gen AI Hackathon</span></div>
+      </div>
+      <div class="partners"><b>Past partners</b><span>Entrepreneur First</span><span>QuantumBlack</span><span>Oliver Wyman</span><span>SyndicateRoom</span><span>Hawk-Eye</span></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="n">~10</div><div class="l small">years since we were established</div></div>
+    <div class="stat"><div class="n">25+</div><div class="l small">projects with start-ups &amp; labs</div></div>
+    <div class="stat"><div class="n">13</div><div class="l small">project batches</div></div>
+  </div>
+
+  <section id="photos" aria-label="Photos from past events">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eye">From the archive</div><h2>Hackathons, demos, <em>panels.</em></h2></div>
+        <p>A decade of rooms full of people building things, and the people from industry who came to see them.</p>
+      </div>
+      <div class="gallery">
+        <figure class="g1"><img src="img/genai-hall.jpg" alt="A darkened lecture theatre during the Gen AI hackathon, slides on the main screen" loading="lazy"><figcaption>Gen AI Hackathon · Mar 2024</figcaption></figure>
+        <figure class="g2"><img src="img/demo-solution.jpg" alt="A student presenting his team's solution at Demo Day" loading="lazy"><figcaption>Demo Day · Jan 2020</figcaption></figure>
+        <figure class="g3"><img src="img/ef-clifford.jpg" alt="Matt Clifford, co-founder of Entrepreneur First, speaking to a full room" loading="lazy" style="object-position:50% 35%"><figcaption>Speaker talk · Matt Clifford, EF</figcaption></figure>
+        <figure class="g4"><img src="img/demo-team.jpg" alt="A project team on stage at Demo Day in the Department of Engineering" loading="lazy"><figcaption>Project team · Demo Day</figcaption></figure>
+        <figure class="g5"><img src="img/social-night.jpg" alt="A crowded Hackbridge social night with pizza" loading="lazy"><figcaption>Social night</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="archive">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eye">Project archive</div><h2>Briefs our teams <em>have taken on.</em></h2></div>
+        <p>Real problems from start-ups and research labs, picked up by student teams over the years.</p>
+      </div>
+    </div>
+    <div class="carousel" id="carousel" aria-roledescription="carousel" tabindex="0" aria-label="Project archive, use arrow keys to browse">
+      <div class="dragcur" id="dragcur" aria-hidden="true"><span>Drag</span></div>
+      <div class="track" id="track">
+          <article class="slide dark" data-i="0" aria-roledescription="slide" aria-label="caspa AI">
+            <img class="sbg" src="img/s/caspa.jpg" alt="caspa AI before-and-after product photo, from the caspa AI website" loading="lazy" draggable="false"><div class="sshade"></div>
+            <div class="stext"><div class="smeta">project brief</div><h3 class="stitle">caspa AI</h3></div>
+            <div class="sfoot"><span class="pill">Mich 2023</span><span class="sline"><b>Generative AI</b> · Turns plain product shots into studio-quality lifestyle photos.</span></div>
+          </article>
+          <article class="slide light" data-i="1" aria-roledescription="slide" aria-label="Playfair">
+            <img class="sbg" src="img/s/playfair-bg.jpg" alt="Abstract table of data dissolving into points" loading="lazy" draggable="false"><div class="lshade"></div>
+            <div class="stext"><div class="smeta">project brief</div><h3 class="stitle">Playfair</h3></div>
+            <div class="sfoot"><span class="pill">2022 – 2024</span><span class="sline"><b>Fintech × ML</b> · Machine learning on traders’ posts to build signals for investors.</span></div>
+          </article>
+          <article class="slide dark" data-i="2" aria-roledescription="slide" aria-label="Spacept">
+            <img class="sbg" src="img/s/spacept.jpg" alt="Before-and-after satellite image analysis from Spacept" loading="lazy" draggable="false"><div class="sshade"></div>
+            <div class="stext"><div class="smeta">project brief</div><h3 class="stitle">Spacept</h3></div>
+            <div class="sfoot"><span class="pill">Lent 2021</span><span class="sline"><b>Computer vision</b> · ML change detection on satellite images to spot oil spills and disaster damage.</span></div>
+          </article>
+          <article class="slide light" data-i="3" aria-roledescription="slide" aria-label="Betterdata">
+            <img class="sbg" src="img/s/betterdata-bg.jpg" alt="A glass cube holding points of light, a metaphor for protected data" loading="lazy" draggable="false" style="object-position:100% 50%"><div class="lshade"></div>
+            <div class="stext"><div class="smeta">project brief</div><h3 class="stitle">Betterdata</h3></div>
+            <div class="sfoot"><span class="pill">Lent 2023</span><span class="sline"><b>Privacy ML</b> · Synthetic data that keeps real data’s statistics while protecting privacy.</span></div>
+          </article>
+          <article class="slide dark" data-i="4" aria-roledescription="slide" aria-label="Opply">
+            <img class="sbg" src="img/s/opply.jpg" alt="Opply platform graphic" loading="lazy" draggable="false"><div class="sshade"></div>
+            <div class="stext"><div class="smeta">project brief</div><h3 class="stitle">Opply</h3></div>
+            <div class="sfoot"><span class="pill">Lent 2022</span><span class="sline"><b>Supply chain</b> · Rebuilding how consumer brands source their ingredients.</span></div>
+          </article>
+          <article class="slide dark" data-i="5" aria-roledescription="slide" aria-label="Multiplii">
+            <img class="sbg" src="img/s/multiplii-bg.jpg" alt="Two mirrored clouds of light points" loading="lazy" draggable="false"><div class="sshade"></div>
+            <div class="stext"><div class="smeta">project brief</div><h3 class="stitle">Multiplii</h3></div>
+            <div class="sfoot"><span class="pill">Lent 2021</span><span class="sline"><b>Behavioural tech</b> · A nudge tool that helps leadership training actually stick.</span></div>
+          </article>
+          <article class="slide dark" data-i="6" aria-roledescription="slide" aria-label="RapiDx Bio">
+            <img class="sbg" src="img/s/rapidx-bg.jpg" alt="A clinician running a sample on a compact diagnostic device" loading="lazy" draggable="false" style="object-position:70% 50%"><div class="sshade"></div>
+            <div class="stext"><div class="smeta">project brief</div><h3 class="stitle">RapiDx Bio</h3></div>
+            <div class="sfoot"><span class="pill">Lent 2024</span><span class="sline"><b>Biotech</b> · A point-of-care device that diagnoses infectious diseases in minutes.</span></div>
+          </article>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="dots" id="dots" role="tablist" aria-label="Choose a project"></div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eye">Current committee</div><h2>The people <em>behind Hackbridge.</em></h2></div>
+        <p>A passionate committee of Cambridge students from diverse backgrounds, united by a love of building things and bringing tech and industry together.</p>
+      </div>
+      <div class="team">
+        <div class="member"><div class="mono-gram">CC</div><div><h3>Caroline C</h3><div class="role">President</div></div></div>
+        <div class="member"><div class="mono-gram">YW</div><div><h3>Yuan Wang</h3><div class="role">Vice President &amp; Treasurer</div></div></div>
+        <div class="member"><div class="mono-gram">SK</div><div><h3>Sahar Khazaeinezhad</h3><div class="role">Secretary &amp; Advisor</div></div></div>
+      </div>
+      <!-- TODO: point "See all" at the full committee page -->
+      <div class="see-all"><a class="btn" href="#committee">See all</a></div>
+    </div>
+  </section>
+
+  <section id="join">
+    <div class="wrap">
+      <div class="join">
+        <div>
+          <div class="eye">Speak at Hackbridge</div>
+          <h2>Building the future? <em>Come tell Cambridge about it.</em></h2>
+          <p class="lede" style="margin-top:26px">We're always open to engineers, founders, researchers and investors who want to speak to our members, whether that's frontier tech like physical AI and chips, or what it takes to fund it. Drop us a line and we'll set up a talk, panel or fireside chat.</p>
+        </div>
+        <div class="contact" role="group" aria-label="Contact details">
+          <div class="eye">Get in touch</div>
+          <dl>
+            <dt>Email</dt><dd><span id="email">hellohackbridge@gmail.com</span></dd>
+            <dt>Open to</dt><dd>Speakers, investors, partners</dd>
+            <dt>Society</dt><dd>Cambridge SU</dd>
+          </dl>
+          <button class="copy" id="copy" type="button">Copy email</button>
+        </div>
+      </div>
+
+      <div class="sponsor-wrap"><div class="eye">Past sponsors &amp; partners</div>
+        <div class="sponsors"><span>Entrepreneur First</span><span>QuantumBlack</span><span>Oliver Wyman</span><span>SyndicateRoom</span><span>Hawk-Eye</span></div>
+      </div>
+      <div class="people">
+        <div class="people-head"><div class="eye">Speakers &amp; supervisors</div><span class="small">A few of the people behind past events and projects</span></div>
+        <div class="people-grid">
+          <div class="person"><div class="what">Speaker</div><h4>Matt Clifford</h4><p>Co-founder, Entrepreneur First. Talk: how to be a founder.</p></div>
+          <div class="person"><div class="what">Project supervisor</div><h4>Dr Dominic Pimenta</h4><p>CEO, TORTUS. Supervised the PocketProfessor team.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="about" id="about" hidden role="dialog" aria-modal="true" aria-label="About Hackbridge">
+  <div class="about-bar wrap"><a class="logo" href="#close" aria-label="Close and go back">HACKBRIDGE</a><a class="about-close" href="#close">Close ✕</a></div>
+  <div class="about-body">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eye">About us</div><h2>Learn by doing. <em>Then do it again, faster.</em></h2></div>
+        <p>Hackbridge was started by two Cambridge engineers who came back from an exchange at MIT wanting to bring its hacker culture home. Our purpose hasn't changed since: give members the skills and experience to push the boundaries of science and technology. Hands on, no red tape.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar lead">
+          <span class="small">Main event</span>
+          <h3>Hackathons</h3>
+          <p>A weekend, a theme, a team. You arrive with an idea or nothing at all, and leave with something that runs.</p>
+          <ul><li>Gen AI hackathon, Mar 2024</li><li>Industry talks &amp; panels</li><li>Open to every subject and level</li></ul>
+        </div>
+        <div class="pillar">
+          <span class="small">Every term</span>
+          <h3>Speaker series &amp; networking</h3>
+          <p>We bring in the people building what's next, from industry practitioners to founders and researchers, to talk frontier tech in a room full of Cambridge's most curious students. Then we keep the conversation going over drinks.</p>
+          <ul><li>Physical AI &amp; robotics</li><li>Chips, compute &amp; LLM inference</li><li>Founders, engineers, researchers</li></ul>
+        </div>
+        <div class="pillar">
+          <span class="small">Tech × capital</span>
+          <h3>From code to capital</h3>
+          <p>Great technology still needs backing. We bridge student builders and the investors who fund what comes next, so you understand how a prototype becomes a company.</p>
+          <ul><li>Sessions with VC &amp; PE investors</li><li>Founder stories &amp; pitch nights</li><li>From prototype to first raise</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Back to top">HACKBRIDGE</a>
+    <nav>
+      <a href="https://github.com/hackbridge" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://medium.com/hackbridge" target="_blank" rel="noopener">Medium</a>
+      <a href="#join">Contact</a>
+    </nav>
+    <span class="small">A Cambridge student society</span>
+  </div>
+</footer>
+
+<script>
+// Copy email
+(function(){
+  var b=document.getElementById('copy');
+  b.addEventListener('click',function(){
+    var t=document.getElementById('email').textContent;
+    var done=function(){b.textContent='copied ✓';setTimeout(function(){b.textContent='Copy email'},1600)};
+    try{navigator.clipboard.writeText(t).then(done,function(){sel()})}catch(e){sel()}
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='selected, press ⌘C'}
+  });
+})();
+
+// About overlay, routed on #about
+(function(){
+  var el=document.getElementById('about');
+  function route(){var on=location.hash==='#about';el.hidden=!on;document.body.classList.toggle('locked',on);if(on)el.scrollTop=0}
+  window.addEventListener('hashchange',route);route();
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!el.hidden)location.hash='close'});
+})();
+
+// Project carousel: endless, Apple TV style; position is continuous and rendered every frame
+(function(){
+  var car=document.getElementById('carousel'),track=document.getElementById('track'),slides=[].slice.call(track.querySelectorAll('.slide')),n=slides.length;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(pointer: fine)').matches;
+  var cur=document.getElementById('dragcur'),dotsEl=document.getElementById('dots'),AUTO=6000,at=0;
+  var pos=0,target=0,vel=0,idx=-1,raf=0,dragging=false,hover=false,visible=true,D={};
+  var dots=slides.map(function(s,j){var b=document.createElement('button');b.type='button';b.className='dot';b.setAttribute('role','tab');b.setAttribute('aria-label',s.getAttribute('aria-label'));b.addEventListener('click',function(){var k=Math.round(target);to(k+wrap(j-k))});dotsEl.appendChild(b);return b});
+  function wrap(d){d=((d%n)+n)%n;return d>n/2?d-n:d}
+  function mod(k){return((k%n)+n)%n}
+  function dims(){var vw=car.clientWidth,m=vw<640;car.classList.toggle('m',m);var peek=m?20:Math.max(48,Math.min(140,vw*.08));var sw=Math.min(1240,vw-2*peek);var h=m?540:Math.max(380,Math.min(580,sw*.44));D={vw:vw,m:m,sw:sw,h:h,gap:m?10:16};car.style.setProperty('--sw',sw+'px');car.style.setProperty('--h',h+'px');D.step=sw+D.gap}
+  function render(){
+    for(var j=0;j<n;j++){
+      var d=wrap(j-pos),ad=Math.abs(d),el=slides[j];
+      var x=D.vw/2+d*D.step-D.sw/2;
+      el.style.transform='translate3d('+x.toFixed(2)+'px,0,0)';
+      el.style.opacity=(1-.38*Math.min(1,ad)).toFixed(3);
+      el.style.visibility=ad>1.9?'hidden':'visible';
+    }
+    var k=mod(Math.round(pos));if(k!==idx)setIndex(k);
+  }
+  function setIndex(k){idx=k;slides.forEach(function(s,j){s.classList.toggle('on',j===k);s.setAttribute('aria-hidden',j!==k)});dots.forEach(function(b,j){b.classList.toggle('on',j===k);b.setAttribute('aria-selected',j===k)});arm()}
+  function loop(){raf=0;if(!dragging){var a=(target-pos)*.1;vel=vel*.74+a;pos+=vel;if(Math.abs(target-pos)<.0005&&Math.abs(vel)<.0005){pos=target;vel=0;render();return}}render();raf=requestAnimationFrame(loop)}
+  function kick(){if(!raf)raf=requestAnimationFrame(loop)}
+  function to(k){target=k;if(reduce){pos=target;vel=0;render()}else kick()}
+  function paused(){return dragging||hover||!visible||reduce}
+  function arm(){clearTimeout(at);at=setTimeout(function(){if(paused())return arm();to(Math.round(target)+1)},AUTO)}
+  // drag / swipe
+  var sx=0,sp=0,lx=0,lt=0,v=0,moved=false,pid=null;
+  car.addEventListener('pointerdown',function(e){if(e.pointerType==='mouse'&&e.button!==0)return;dragging=true;moved=false;pid=e.pointerId;sx=lx=e.clientX;lt=performance.now();v=0;sp=pos;vel=0;target=pos;cur.classList.add('down');kick()});
+  window.addEventListener('pointermove',function(e){
+    if(fine)cur.style.transform='translate3d('+e.clientX+'px,'+e.clientY+'px,0)';
+    if(!dragging||e.pointerId!==pid)return;
+    var dx=e.clientX-sx;if(!moved&&Math.abs(dx)>4){moved=true;try{car.setPointerCapture(pid)}catch(_){}}
+    var now=performance.now(),dt=Math.max(1,now-lt);v=v*.6+((e.clientX-lx)/dt)*.4;lx=e.clientX;lt=now;
+    pos=sp-dx/D.step;
+  });
+  function release(){
+    if(!dragging)return;dragging=false;cur.classList.remove('down');
+    if(performance.now()-lt>90)v=0;
+    var proj=pos-(v*240)/D.step,t=Math.round(proj),s0=Math.round(sp);
+    if(t===s0&&Math.abs(pos-sp)>.08)t=s0+(pos>sp?1:-1);
+    t=Math.max(s0-3,Math.min(s0+3,t));
+    vel=-(v*16)/D.step*.5;to(t);arm();
+  }
+  window.addEventListener('pointerup',release);window.addEventListener('pointercancel',release);
+  slides.forEach(function(s,j){s.addEventListener('click',function(e){if(moved){e.preventDefault();return}var k=Math.round(target);var d=wrap(j-k);if(d)to(k+d)})});
+  // trackpad
+  var wt=0;
+  car.addEventListener('wheel',function(e){if(Math.abs(e.deltaX)<=Math.abs(e.deltaY)*.8)return;e.preventDefault();target+=e.deltaX/D.step;kick();clearTimeout(wt);wt=setTimeout(function(){to(Math.round(target))},140)},{passive:false});
+  car.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){to(Math.round(target)+1);e.preventDefault()}else if(e.key==='ArrowLeft'){to(Math.round(target)-1);e.preventDefault()}});
+  if(fine){car.classList.add('grab');car.addEventListener('pointerenter',function(){cur.classList.add('show');hover=true});car.addEventListener('pointerleave',function(){cur.classList.remove('show');hover=false})}
+  if('IntersectionObserver' in window)new IntersectionObserver(function(es){visible=es[0].isIntersecting}).observe(car);
+  window.addEventListener('resize',function(){dims();render()});
+  dims();render();
+})();
+</script>
+</body>
+</html>
