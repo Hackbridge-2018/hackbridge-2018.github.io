@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap">
 <style>
-/* Light sage canvas, Midnight-blue type, soft-blue italics; serif display, quiet sans body; one Midnight section for rhythm. */
+/* Graphite canvas, near-white type, lavender accent; serif display, quiet sans body. */
 :root{
   --bg:#e4ece7;
   --bg2:#dae4de;
@@ -215,6 +215,55 @@ footer .logo{background:#fff;color:var(--ink)}
 footer .small{color:#8f9ab0}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* ===== Graphite + Lavender theme (clean tech). Layout, fonts, text and images untouched; colours only. ===== */
+:root{
+  --bg:#0d0e11;--bg2:#121419;--paper:#16181d;--card:#16181d;
+  --ink:#eef0f3;--fg:#eef0f3;--muted:#9aa0aa;--dim:#4a4f58;
+  --soft:#9aa3ff;--soft-ink:#9aa3ff;--accent:#9aa3ff;--accent-hi:#b6bcff;--on-accent:#0d0e11;
+  --line:rgba(255,255,255,.09);
+  color-scheme:dark;
+}
+::selection{background:var(--accent);color:var(--on-accent)}
+h1 em,h2 em,#join h2 em{color:var(--accent)}
+.logo,footer .logo{background:#1b2a4a;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+.btn{border-color:rgba(255,255,255,.22);color:var(--fg)}
+.btn:hover{border-color:var(--fg);background:rgba(255,255,255,.04)}
+.btn.solid{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.solid:hover{background:var(--accent-hi);border-color:var(--accent-hi)}
+.btn.line{border-color:var(--accent);color:var(--accent)}
+.arch{box-shadow:0 30px 70px rgba(0,0,0,.45)}
+.arch::after{background:linear-gradient(180deg,rgba(13,14,17,0) 58%,rgba(13,14,17,.7))}
+.stat .n{color:var(--fg)}
+.stat:nth-child(2) .n,.stat:nth-child(3) .n{color:var(--accent)}
+figcaption{background:linear-gradient(transparent,rgba(8,9,11,.85))}
+.slide{box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.slide.dark{background:var(--paper);color:#eef0f3}
+.slide.dark .smeta{color:var(--accent)}
+.sshade{background:linear-gradient(90deg,rgba(13,14,17,.92) 0%,rgba(13,14,17,.62) 34%,rgba(13,14,17,0) 64%),linear-gradient(0deg,rgba(13,14,17,.82) 0%,rgba(13,14,17,0) 38%)}
+.carousel.m .sshade{background:linear-gradient(180deg,rgba(13,14,17,.88) 0%,rgba(13,14,17,.2) 40%,rgba(13,14,17,.2) 55%,rgba(13,14,17,.92) 100%)}
+.pill{background:var(--accent);color:var(--on-accent)}
+/* light slides stay light, with their own local palette */
+.slide.light{--ink:#0d0e11;--soft-ink:#5a62d8;background:#f4f5f7;color:#0d0e11}
+.slide.light .smeta{color:#5a62d8}
+.slide.light .pill{background:#0d0e11;color:#f4f5f7}
+.lshade{background:linear-gradient(90deg,rgba(244,245,247,.92) 0%,rgba(244,245,247,.6) 38%,rgba(244,245,247,0) 62%),linear-gradient(0deg,rgba(244,245,247,.85) 0%,rgba(244,245,247,0) 34%)}
+.dot{background:var(--dim)}.dot:hover{background:var(--muted)}.dot.on{background:var(--accent)}
+.dragcur{background:rgba(13,14,17,.6)}
+.member,.pillar{background:rgba(255,255,255,.025)}
+.mono-gram{background:var(--accent);color:var(--on-accent)}
+.pillar.lead{background:var(--paper);border-color:var(--accent);color:var(--fg)}
+.pillar.lead p{color:var(--muted)}.pillar.lead .small,.pillar .small{color:var(--accent)}
+#join{background:var(--bg2);color:var(--fg);border-bottom:1px solid var(--line)}
+#join .eye{color:var(--accent)}#join h2{color:var(--fg)}#join .lede{color:var(--muted)}
+.sponsor-wrap,.people,.people-grid,.person{border-color:var(--line)}
+.sponsors span,.person h4{color:var(--fg)}
+.person .what{color:var(--accent)}.person p{color:var(--muted)}.people-head .small{color:var(--muted)}
+.contact{background:var(--paper);color:var(--fg);border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.4)}
+#join .contact .eye{color:var(--accent)}.contact dt{color:var(--accent)}#email{color:var(--fg)}
+.copy{background:var(--accent);color:var(--on-accent)}.copy:hover{background:var(--accent-hi)}
+footer{background:#08090b;border-top:1px solid var(--line);color:var(--fg)}
+footer a:not(.logo){color:var(--muted)}footer a:not(.logo):hover{color:var(--fg)}footer .small{color:var(--muted)}
 </style>
 
 </head>
@@ -326,21 +375,6 @@ footer .small{color:#8f9ab0}
     </div>
   </section>
 
-  <section id="team">
-    <div class="wrap">
-      <div class="sec-head">
-        <div><div class="eye">Current committee</div><h2>The people <em>behind Hackbridge.</em></h2></div>
-        <p>A passionate committee of Cambridge students from diverse backgrounds, united by a love of building things and bringing tech and industry together.</p>
-      </div>
-      <div class="team">
-        <div class="member"><div class="mono-gram">CC</div><div><h3>Caroline C</h3><div class="role">President</div></div></div>
-        <div class="member"><div class="mono-gram">YW</div><div><h3>Yuan Wang</h3><div class="role">Vice President &amp; Treasurer</div></div></div>
-        <div class="member"><div class="mono-gram">SK</div><div><h3>Sahar Khazaeinezhad</h3><div class="role">Secretary &amp; Advisor</div></div></div>
-      </div>
-      <!-- TODO: point "See all" at the full committee page -->
-      <div class="see-all"><a class="btn" href="#committee">See all</a></div>
-    </div>
-  </section>
 
   <section id="join">
     <div class="wrap">
@@ -364,6 +398,21 @@ footer .small{color:#8f9ab0}
       <div class="sponsor-wrap"><div class="eye">Past sponsors &amp; partners</div>
         <div class="sponsors"><span>Entrepreneur First</span><span>McKinsey AI</span><span>Oliver Wyman</span><span>SyndicateRoom</span><span>Hawk-Eye</span></div>
       </div>
+    </div>
+  </section>
+  <section id="team">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eye">Current committee</div><h2>The people <em>behind Hackbridge.</em></h2></div>
+        <p>A passionate committee of Cambridge students from diverse backgrounds, united by a love of building things and bringing tech and industry together.</p>
+      </div>
+      <div class="team">
+        <div class="member"><div class="mono-gram">CC</div><div><h3>Caroline C</h3><div class="role">President</div></div></div>
+        <div class="member"><div class="mono-gram">YW</div><div><h3>Yuan Wang</h3><div class="role">Vice President &amp; Treasurer</div></div></div>
+        <div class="member"><div class="mono-gram">SK</div><div><h3>Sahar Khazaeinezhad</h3><div class="role">Secretary &amp; Advisor</div></div></div>
+      </div>
+      <!-- TODO: point "See all" at the full committee page -->
+      <div class="see-all"><a class="btn" href="#committee">See all</a></div>
     </div>
   </section>
 </main>
