@@ -207,6 +207,9 @@ figcaption{position:absolute;left:0;bottom:0;right:0;padding:36px 16px 14px;font
 .hk-solo{max-width:820px}
 .hk-grid{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:center}
 .hk-poster{display:block;width:100%;height:auto;max-width:440px;margin-inline:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.hk-side{position:relative}
+.hk-dino{position:absolute;top:-6px;right:0;width:84px;height:auto;image-rendering:pixelated;opacity:.95}
+@media (max-width:860px){.hk-dino{position:static;display:block;width:56px;margin:0 0 14px}}
 .hk-side h2{margin:14px 0 16px}
 .hk-side p{color:var(--muted);margin:0 0 10px;font-weight:300;font-size:18px}
 .hk-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
@@ -342,6 +345,7 @@ footer a:not(.logo){color:var(--muted)}footer a:not(.logo):hover{color:var(--fg)
         <div class="ev-img"><img src="img/hackathon-2027-cover.jpg" alt="Hackbridge AI Hackathon, 23–24 January 2027, Cambridge" width="1200" height="1104"></div>
       </a>
       <div class="hk-side">
+        <img class="hk-dino" src="img/nexus-dino.png" alt="" width="212" height="200">
         <div class="eye">Applications open</div>
         <h2>Hackbridge × neXus<br>AI Hackathon <em>2027.</em></h2>
         <p>23–24 January 2027 · Cambridge, in person.</p>
